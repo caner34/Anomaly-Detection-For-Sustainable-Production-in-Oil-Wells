@@ -20,7 +20,7 @@ import pandas as pd
 import numpy as np
 
 main_dataset_folder = 'data/3W'
-data_sub_folders = sorted(os.listdir(main_dataset_folder))[:]
+data_sub_folders = sorted(os.listdir(main_dataset_folder))[2:]
 
 
 
@@ -58,7 +58,7 @@ def load_data_to_df(first_n_subfolders=1, first_m_files=20):
     return data
 
 
-data = load_data_to_df(first_m_files=100)
+data = load_data_to_df(first_m_files=500)
 data['class'].value_counts()
 
 data.shape
